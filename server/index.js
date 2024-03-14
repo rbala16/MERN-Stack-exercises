@@ -7,6 +7,8 @@ const workoutRoutes = require('./routes/workouts');
 const app = express(); //express() is actually an function that we just invoke
 
 // middleware
+app.use(express.json())
+
 app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
